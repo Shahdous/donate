@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh - Blog</title>
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="">
+        <div class="navbar bg-base-100 px-40 py-5 bg-[#F9F7F3]">
+            <div class="navbar-start">
+              <button onclick="window.location.href='index.html'" class="btn bg-[#B4F461] font-bold text-xl px-8">Home</button>
+            </div>
+            <div class="navbar-center hidden lg:flex justify-between">
+              <img class="mr-4" src="assets/logo.png" alt="">
+              <h1 class="font-extrabold">Donate Bangladesh</h1>
+            </div>
+            <div class="navbar-end">
+                <img class="mr-2" src="assets/coin.png" alt="">
+                <h1 id="accountBalance" class="font-bold">5500 BDT</h1>
+            </div>            
+        </div>
+    </header>
+
+    <div class="max-w-[1140px] mx-auto my-10">
+        <h1 class="text-4xl font-extrabold text-center mb-10">Our Blog</h1>
+        <div class="space-y-10">
+            <!-- Blog Post 1 -->
+            <div class="bg-white p-8 rounded-lg shadow">
+                <h2 class="text-2xl font-bold mb-4">How Your Donations Help Flood Victims in Bangladesh</h2>
+                <p class="text-gray-600">
+                    Bangladesh has been severely affected by recurring floods, displacing millions of people and damaging critical infrastructure. Your donations provide immediate relief to those affected by such disasters, offering emergency food, shelter, and medical supplies to flood-impacted communities. Our recent flood-relief efforts in Noakhali and Feni have made a significant impact, reaching more than 10,000 individuals who were stranded due to rising waters.
+                </p>
+                <p class="text-gray-600 mt-4">
+                    With your help, we can continue these efforts and expand our reach to more remote areas that need support. Every donation counts, and together, we can offer a lifeline to those affected by the floods in Bangladesh. Read on to learn more about the real impact of your contributions and hear from families who have been helped by your generosity.
+                </p>
+            </div>
+    
+            <!-- Blog Post 2 -->
+            <div class="bg-white p-8 rounded-lg shadow">
+                <h2 class="text-2xl font-bold mb-4">The Importance of Community in Disaster Recovery</h2>
+                <p class="text-gray-600">
+                    In times of disaster, community resilience is critical to recovery. The people of Bangladesh have shown incredible strength and solidarity in the face of adversity. With the help of donors like you, communities are better equipped to withstand disasters and bounce back stronger. We partner with local organizations and volunteers to ensure that aid reaches those who need it most, while also empowering communities to rebuild and become more resilient to future crises.
+                </p>
+                <p class="text-gray-600 mt-4">
+                    Your donations go beyond immediate relief. They help build sustainable systems that ensure communities are prepared for the future. From setting up local emergency response teams to providing long-term rehabilitation, your support enables communities to stand strong in the face of challenges.
+                </p>
+            </div>
+    
+            <!-- Blog Post 3 -->
+            <div class="bg-white p-8 rounded-lg shadow">
+                <h2 class="text-2xl font-bold mb-4">Why Every Donation Matters: Stories from the Field</h2>
+                <p class="text-gray-600">
+                    No donation is too small. Each contribution makes a tangible difference in the lives of those affected by disasters in Bangladesh. We’ve seen firsthand how a single donation can provide food for a family, offer medical assistance to an injured individual, or even help rebuild a damaged home. Our field team works tirelessly to ensure that every donation is used effectively and reaches the most vulnerable communities.
+                </p>
+                <p class="text-gray-600 mt-4">
+                    In this post, we share stories from the field — stories of resilience, hope, and the power of compassion. These stories highlight the real-life impact of your support and illustrate why every donation truly matters. From young children to elderly individuals, your generosity brings relief and hope to people in dire need.
+                </p>
+            </div>
+    
+            <!-- New Section: DOM Questions and Answers -->
+            <div class="bg-white p-8 rounded-lg shadow">
+                <h2 class="text-2xl font-bold mb-4">Understanding the Document Object Model (DOM)</h2>
+                <!-- Question 1 -->
+                <details class="mb-4">
+                    <summary class="font-semibold text-xl">1. What is the DOM?</summary>
+                    <p class="mt-2 text-gray-600">
+                        The DOM (Document Object Model) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages like JavaScript can interact with the page.
+                    </p>
+                </details>
+    
+                <!-- Question 2 -->
+                <details class="mb-4">
+                    <summary class="font-semibold text-xl">2. How can you manipulate the DOM using JavaScript?</summary>
+                    <p class="mt-2 text-gray-600">
+                        You can manipulate the DOM using JavaScript by selecting elements (via methods like `getElementById`, `querySelector`, etc.), changing their content (`innerHTML`, `textContent`), altering their styles (`style` property), or even adding and removing elements dynamically using `createElement` and `removeChild`.
+                    </p>
+                </details>
+    
+                <!-- Question 3 -->
+                <details class="mb-4">
+                    <summary class="font-semibold text-xl">3. What are DOM events?</summary>
+                    <p class="mt-2 text-gray-600">
+                        DOM events are actions that occur in the browser (such as a click, keypress, or page load). You can respond to these events by attaching event listeners to elements. For example, you can handle a button click using `addEventListener` to execute a function when the button is clicked.
+                    </p>
+                </details>
+    
+                <!-- Question 4 -->
+                <details>
+                    <summary class="font-semibold text-xl">4. What is event delegation in the DOM?</summary>
+                    <p class="mt-2 text-gray-600">
+                        Event delegation is a technique where you attach a single event listener to a parent element to manage events triggered by its child elements. Instead of adding multiple event listeners to individual child elements, event delegation allows you to handle events efficiently using event bubbling, where the event flows from the target element to the parent.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

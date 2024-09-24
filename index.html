@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .color-primary{
+            color: #B4F461;
+        }
+    </style>
+</head>
+<body>
+    <header class="">
+        <div class="navbar bg-base-100 px-40 py-5  bg-[#F9F7F3]">
+            <div class="navbar-start">
+              <button onclick="window.location.href='blog.html'" class="btn bg-[#B4F461] font-bold text-xl px-8">Blog</button>
+            </div>
+            <div class="navbar-center hidden lg:flex justify-between">
+              <img class="mr-4" src="assets/logo.png" alt="">
+              <h1 class="font-extrabold">Donate Bangladesh</h1>
+            </div>
+            <div class="navbar-end">
+                <img class="mr-2" src="assets/coin.png" alt="">
+                <h1 id="accountBalance" class="font-bold">5500 BDT</h1>
+            </div>            
+          </div>
+    </header>
+    
+    <div class="max-w-[1140px] mx-auto pb-10">
+        <div class="flex justify-center mx-auto align-middle mt-20 ">
+            <button class="btn bg-[#B4F461] font-bold text-xl px-8 mr-3">Donation</button>
+            <button onclick="window.location.href='history.html'" class="btn btn-ghost font-bold text-xl px-8 border border-gray-400 text-gray-600 hover:bg-gray-200">History</button>
+        </div>
+            <!-- Card 1 -->
+        <div class="flex items-center bg-white p-6 rounded-lg shadow mt-10">
+                <!-- Left side: Image -->
+                <div class="w-1/2 mr-3">
+                    <img src="assets/noakhali.png" alt="Flood at Noakhali" class="rounded-lg object-contain w-full h-auto">
+                </div>
+                <!-- Right side: Text content -->
+                <div class="w-1/2 mt-4 sm:mt-0 sm:ml-4">
+                    <div class="inline-flex items-center justify-center bg-gray-100 px-4 py-2 rounded-md">
+                        <img class="mr-2" src="assets/coin.png" alt="">
+                        <h1 id="bdtNoakhali" class="font-bold text-gray-700">0 BDT</h1>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-[#494949] mt-4">Donate for Flood at Noakhali, Bangladesh</h3>
+                    <p class="text-gray-600 mt-2">
+                        The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                    </p>
+                    <input id="inputNoakhali" type="text" placeholder="Write Donation Amount" class="input input-bordered mt-4 w-full">
+                    <div id="errorNoakhali" class="text-red-500 mt-2"></div>
+                    <button onclick="handleDonation('bdtNoakhali', 'inputNoakhali', 'errorNoakhali', 'Flood at Noakhali, Bangladesh')" class="btn bg-[#B4F461] font-bold text-xl px-8 mt-4 w-full">Donate Now</button>
+
+                </div>
+            </div>       
+            <!-- Card 2 -->
+            <div class="flex items-center bg-white p-6 rounded-lg shadow mt-10">
+                <!-- Left side: Image -->
+                <div class="w-1/2 mr-3">
+                    <img src="assets/feni.png" alt="Flood at Noakhali" class="rounded-lg object-contain w-full h-auto">
+                </div>
+                <!-- Right side: Text content -->
+                <div class="w-1/2 mt-4 sm:mt-0 sm:ml-4">
+                    <div class="inline-flex items-center justify-center bg-gray-100 px-4 py-2 rounded-md">
+                        <img class="mr-2" src="assets/coin.png" alt="">
+                        <h1 id="bdtFeni" class="font-bold text-gray-700">0 BDT</h1>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-[#494949] mt-4">Donate for Flood Relief in Feni, Bangladesh</h3>
+                    <p class="text-gray-600 mt-2">
+                        The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+                    </p>
+                    <input id="inputFeni" type="text" placeholder="Write Donation Amount" class="input input-bordered mt-4 w-full">
+                    <div id="errorFeni" class="text-red-500 mt-2"></div>
+                    <button onclick="handleDonation('bdtFeni', 'inputFeni', 'errorFeni', 'Flood Relief in Feni, Bangladesh')" class="btn bg-[#B4F461] font-bold text-xl px-8 mt-4 w-full">Donate Now</button>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="flex items-center bg-white p-6 rounded-lg shadow mt-10">
+                <!-- Left side: Image -->
+                <div class="w-1/2 mr-3">
+                    <img src="assets/quota-protest.png" alt="Flood at Noakhali" class="rounded-lg object-contain w-full h-auto">
+                </div>
+                <!-- Right side: Text content -->
+                <div class="w-1/2 mt-4 sm:mt-0 sm:ml-4">
+                    <div class="inline-flex items-center justify-center bg-gray-100 px-4 py-2 rounded-md">
+                        <img class="mr-2" src="assets/coin.png" alt="">
+                        <h1 id="bdtQuota" class="font-bold text-gray-700">0 BDT</h1>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-[#494949] mt-4">Aid for Injured in the Quota Movement</h3>
+                    <p class="text-gray-600 mt-2">
+                        The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                    </p>
+                    <input id="inputQuota" type="text" placeholder="Write Donation Amount" class="input input-bordered mt-4 w-full">
+                    <div id="errorQuota" class="text-red-500 mt-2"></div>
+                    <button onclick="handleDonation('bdtQuota', 'inputQuota', 'errorQuota', 'Aid for Injured in the Quota Movement, Bangladesh')" class="btn bg-[#B4F461] font-bold text-xl px-8 mt-4 w-full">Donate Now</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Confirmation Modal -->
+        <div id="confirmationModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center max-w-md mx-auto">
+                <h2 class="text-3xl font-bold mb-4">Congrats!</h2>
+                <img src="assets/coin.png" class="w-12 h-12 mx-auto mb-4" alt="Success">
+                <p class="text-gray-700 mb-4">You have donated for humankind <br> <p class="font-bold mb-4">successfully!</p></p>
+                <button onclick="closeConfirmation()" class="btn bg-[#F3F3F3] w-full">Close Confirmation</button>
+            </div>
+        </div>
+
+        <script>
+            function updateBalanceDisplay() {
+                const accountBalance = localStorage.getItem('accountBalance') || 5500;
+                document.getElementById('accountBalance').innerText = accountBalance + ' BDT';
+            }
+        
+            function handleDonation(cardId, inputId, errorId, cause) {
+                const bdtElement = document.getElementById(cardId);
+                const inputAmount = document.getElementById(inputId).value;
+                const errorElement = document.getElementById(errorId);
+        
+                errorElement.innerText = '';
+
+                const donationAmount = parseInt(inputAmount);
+        
+                if (isNaN(donationAmount) || donationAmount <= 0) {
+                    errorElement.innerText = 'Please enter a valid positive number.';
+                    return;
+                }
+        
+                const currentBDT = parseInt(bdtElement.innerText.replace(' BDT', '')) || 0;
+        
+                const newTotalBDT = currentBDT + donationAmount;
+        
+                bdtElement.innerText = newTotalBDT + ' BDT';
+        
+                let accountBalance = parseInt(localStorage.getItem('accountBalance')) || 5500;
+        
+                if (donationAmount > accountBalance) {
+                    errorElement.innerText = 'Insufficient balance!';
+                    return;
+                }
+        
+                accountBalance -= donationAmount;
+                localStorage.setItem('accountBalance', accountBalance);
+        
+                updateBalanceDisplay();
+        
+                const donationHistory = JSON.parse(localStorage.getItem('donationHistory')) || [];
+                const donationRecord = {
+                    amount: donationAmount,
+                    cause: cause,
+                    date: new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka', timeZoneName: 'short' }),
+                };
+                donationHistory.push(donationRecord);
+                localStorage.setItem('donationHistory', JSON.stringify(donationHistory));
+        
+                document.getElementById(inputId).value = '';
+        
+                showConfirmation();
+            }
+
+            function showConfirmation() {
+                document.getElementById("confirmationModal").classList.remove("hidden");
+            }
+        
+            function closeConfirmation() {
+                document.getElementById("confirmationModal").classList.add("hidden");
+            }
+        
+            document.addEventListener("DOMContentLoaded", function () {
+                if (!localStorage.getItem('accountBalance')) {
+                    localStorage.setItem('accountBalance', 5500);
+                }
+                updateBalanceDisplay();
+            });
+        </script>
+        
+        
+        
+        
+    
+</body>
+</html>

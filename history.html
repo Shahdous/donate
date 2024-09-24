@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation History</title>
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="">
+        <div class="navbar bg-base-100 px-40 py-5  bg-[#F9F7F3]">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a>Item 1</a></li>
+                  <li>
+                    <a>Parent</a>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Item 3</a></li>
+                </ul>
+              </div>
+              <div class="navbar-start">
+                <button onclick="window.location.href='blog.html'" class="btn bg-[#B4F461] font-bold text-xl px-8">Blog</button>
+              </div>
+            </div>
+            <div class="navbar-center hidden lg:flex justify-between">
+              <img class="mr-4" src="assets/logo.png" alt="">
+              <h1 class="font-extrabold">Donate Bangladesh</h1>
+            </div>
+            <div class="navbar-end">
+                <img class="mr-2" src="assets/coin.png" alt="">
+                <h1 id="accountBalance" class="font-bold">5500 BDT</h1> 
+            </div>            
+          </div>
+    </header>
+    <div class="max-w-[1140px] mx-auto mt-20 mb-10">
+        <div class="flex justify-center mx-auto align-middle mb-10">
+            <button onclick="window.location.href='index.html'" class="btn btn-ghost font-bold text-xl px-8 border border-gray-400 text-gray-600 hover:bg-gray-200">Donation</button>
+            <button class="btn bg-[#B4F461] font-bold text-xl px-8 ml-3">History</button>
+        </div>
+
+        <div id="donationHistoryContainer" class="space-y-6">
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const donationHistory = JSON.parse(localStorage.getItem('donationHistory')) || [];
+            const historyContainer = document.getElementById('donationHistoryContainer');
+    
+            if (donationHistory.length === 0) {
+                historyContainer.innerHTML = '<p class="text-center text-gray-500">No donation history available.</p>';
+            } else {
+                donationHistory.forEach((donation) => {
+                    const donationEntry = `
+                        <div class="p-5 bg-white rounded-lg shadow">
+                            <h2 class="text-lg font-bold">${donation.amount} Taka is Donated for ${donation.cause}</h2>
+                            <p class="text-sm text-gray-500">Date: ${donation.date}</p>
+                        </div>`;
+                    historyContainer.innerHTML += donationEntry;
+                });
+            }
+        });
+    </script>    
+</body>
+</html>
